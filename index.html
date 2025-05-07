@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narendra Maurya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Narendra Maurya">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>narendra maurya</h1>
+            <div class="socials">
+                <a href="https://github.com/Narennnnn" target="_blank">github</a>
+                <a href="https://leetcode.com/u/NarendraMaurya/" target="_blank">leetcode</a>
+                <a href="https://www.linkedin.com/in/narendra-maurya-01/" target="_blank">linkedin</a>
+            </div>
+        </header>
+
+        <section class="intro">
+            <p>22, software engineer.</p>
+            <p>SDE intern, <a href="https://reewild.com/" target="_blank">reewild</a>.</p>
+        </section>
+
+        <section class="highlights">
+            <ul>
+                <li><a href="#" id="story-link">my story</a> so far</li>
+                <li>software engineer intern at <a href="https://reewild.com/" target="_blank">&nbsp;reewild</a></li>
+                <li>studied computer science at <a href="https://geu.ac.in/" target="_blank">&nbsp;graphic era university</a></li>
+                <li>fun person to be around</li>
+            </ul>
+        </section>
+
+
+        <section id="projects" class="projects">
+            <h2>things i've made:</h2>
+            <ul>
+                <li><a href="https://github.com/Narennnnn/UploadAndQueryService" target="_blank">upload and query service</a> - flask API for large CSV uploads & fast queries using ClickHouse for efficient data storage and retrieval</li>
+                <li><a href="https://github.com/Narennnnn/SpringScheduler" target="_blank">websocket server</a> - real-time communication system with spring boot & netty.io for bidirectional data exchange between services</li>
+                <li><a href="https://www.loom.com/share/e9de3364aab244258ff6bcb3c2bb7219?sid=5b957704-896b-4299-8adb-ae406446d9f8" target="_blank">ecoscan</a> - (2024) mobile app that calculates carbon footprint of clothing items using Azure AI Vision API and React Native</li>
+                <li><a href="https://github.com/Narennnnn/SpringScheduler" target="_blank">scheduler</a> - (2024) spring boot data retrieval system with MySQL implementing scheduled tasks and proper error handling</li>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>places i've worked:</h2>
+            <ul>
+                <li><a href="https://reewild.com/" target="_blank">reewild</a> - (jan 2025 - present) developed a business dashboard for Square payments monitoring with Next.js and Tailwind, improving stakeholder visibility by 30%. built secure backend services with JWT authentication and HMAC webhook verification, enhancing platform security by 40%. integrated Apple & Google Wallet passes for the Planet Points loyalty program, enabling real-time updates to users. implemented a .NET service with cron jobs for automated SendGrid notifications. optimized React Native mobile app by adding pagination to the products API.</li>
+                <li><a href="https://www.tonnochycapital.com/" target="_blank">tonnochy capital</a> - (aug 2023 - jul 2024) built high-performance Java Spring Boot services for cryptocurrency exchange connectivity. implemented bidirectional WebSocket system with Netty.io that reduced data latency by 40%. developed thread-safe collections and proper concurrency patterns for reliable market data processing. created Python scripts for automated data retrieval that reduced manual work by 90%. deployed containerized services to AWS EC2 using Docker for optimal scalability.</li>
+            </ul>
+        </section>
+
+        <section class="facts">
+            <h2>quick facts:</h2>
+            <ul>
+                <li>ranked in top 9.91% globally on <a href="https://leetcode.com/u/NarendraMaurya/" target="_blank">leetcode</a> (weekly contest 416)</li>
+                <li>led a team to top 5 finish among 500+ teams in a regional hackathon</li>
+                <li>technical head at GEU ACM student chapter, organizing events and fostering innovation</li>
+                <li>smart india hackathon team captain, building an AI-assisted telemedicine kiosk for rural healthcare</li>
+                <li>passionate about cricket, 8-ball pool, snooker, and watching movies</li>
+                <li>known as a fun and collaborative teammate who brings positive energy to projects</li>
+            </ul>
+        </section>
+        
+    </div>
+
+    <div id="story-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>my story</h2>
+            <p>I started my journey in computer science at Graphic Era University, where I quickly developed a passion for backend development and distributed systems. During my academic years, I focused on building a strong foundation in both theory and practical applications.</p>
+            <p>My first professional experience came at Tonnochy Capital, where I worked on developing robust backend systems for cryptocurrency market data. This opportunity allowed me to work with Spring Boot, WebSockets, and concurrent programming in a high-stakes environment where performance and reliability were critical.</p>
+            <p>Currently at Reewild, I'm expanding my skills across the full stack, working on projects that combine frontend technologies like Next.js with secure backend systems. These applications focus on sustainability and carbon footprint reduction, enabling users to make more environmentally conscious choices.</p>
+            <p>Through my projects and work experience, I've developed expertise in Java, Spring Boot, Python, and modern JavaScript frameworks. I'm particularly interested in building scalable, efficient systems that can handle complex data operations and real-time communication.</p>
+            <p>Outside of work, I'm an active participant in programming contests, hackathons, and community events. I'm passionate about cricket and enjoy playing 8-ball pool and snooker to unwind. I'm also an avid movie watcher, always up for discussing the latest films and classics alike.</p>
+            <p>I bring a collaborative and fun energy to every team I work with, believing that the best solutions come from open communication and mutual respect. I'm always looking to learn and experiment with new technologies while making meaningful connections with colleagues.</p>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality for "my story"
+        const modal = document.getElementById("story-modal");
+        const storyLink = document.getElementById("story-link");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        storyLink.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Re-enable scrolling
+        }
+
+        // Make sure the event handler for the close button has higher priority
+        closeBtn.addEventListener("click", function(e) {
+            e.stopPropagation();
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Re-enable scrolling
+        });
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto"; // Re-enable scrolling
+            }
+        }
+    </script>
+</body>
+</html> 
