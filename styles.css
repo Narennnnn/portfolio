@@ -105,13 +105,15 @@ h2 {
 .socials a {
     text-decoration: none;
     position: relative;
-    font-weight: 400;
-    opacity: 0.8;
+    font-weight: 500;
+    opacity: 0.9;
     transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    border-bottom: none;
 }
 
 .socials a:hover {
     opacity: 1;
+    border-bottom: none;
 }
 
 .socials a::after {
@@ -133,11 +135,11 @@ h2 {
 }
 
 a {
-    color: var(--link-color);
+    color: #121212;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    font-weight: 400;
-    border-bottom: 1px solid transparent;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(63, 125, 88, 0.3);
 }
 
 a:hover {
@@ -224,12 +226,12 @@ section a {
     font-weight: 500;
 }
 
-.projects a, .experience a {
+.projects a, .experience a, .facts a {
     font-weight: 500;
     display: inline-block;
     transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    color: rgba(0, 0, 0, 0.85);
 }
-
 
 .modal {
     display: none;
@@ -332,12 +334,22 @@ section a {
     :root {
         --bg-color: #FEF3E2;
         --text-color: #121212;
-        --link-color: #000;
+        --link-color: #121212;
         --link-hover-color: #3F7D58;
         --accent-color: #3F7D58;
         --secondary-color: #f3f4f6;
         --border-color: rgba(0, 0, 0, 0.1);
         --modal-content-bg: #FEF3E2;
+    }
+    
+    /* Ensure dark mode links maintain the same style */
+    a {
+        color: #121212;
+        border-bottom: 1px solid rgba(63, 125, 88, 0.3);
+    }
+    
+    .projects a, .experience a, .facts a {
+        color: rgba(0, 0, 0, 0.85);
     }
     
     .modal {
@@ -347,5 +359,27 @@ section a {
     .close:hover,
     .close:focus {
         background-color: rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* Additional responsive tweaks */
+@media (max-width: 576px) {
+    body {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .socials {
+        margin-top: var(--spacing-xs);
+        gap: 0.7rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+        margin: 10% auto;
     }
 } 
