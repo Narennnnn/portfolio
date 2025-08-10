@@ -1,3 +1,43 @@
+ul.work-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.work-item {
+    margin-bottom: 32px;
+}
+
+.work-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 18px;
+    font-size: 1.05em;
+    margin-bottom: 4px;
+}
+
+.work-company {
+    font-weight: bold;
+    min-width: 140px;
+}
+
+.work-date {
+    color: #7a6c5c;
+    font-size: 0.98em;
+    min-width: 120px;
+}
+
+.work-title {
+    font-weight: 600;
+    color: #3d3d3d;
+    font-size: 1em;
+}
+
+.work-desc {
+    margin-left: 0;
+    line-height: 1.7;
+    font-size: 0.98em;
+}
 :root {
     --bg-color: #FEF3E2;
     --text-color: #121212;
@@ -269,21 +309,23 @@ section a {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     padding: 5px 10px;
     position: absolute;
     right: 15px;
     top: 15px;
     z-index: 10;
-    border-radius: 50%;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 .close:hover,
 .close:focus {
-    color: var(--link-hover-color);
-    background-color: rgba(0, 0, 0, 0.05);
+    color: #000;
+    background: none !important;
+    outline: none;
 }
-
 .modal-content p {
     margin-bottom: var(--spacing-sm);
     line-height: 1.8;
@@ -354,11 +396,6 @@ section a {
     
     .modal {
         backdrop-filter: blur(8px);
-    }
-    
-    .close:hover,
-    .close:focus {
-        background-color: rgba(0, 0, 0, 0.05);
     }
 }
 
