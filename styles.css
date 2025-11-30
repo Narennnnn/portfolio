@@ -419,4 +419,255 @@ section a {
         padding: 1rem;
         margin: 10% auto;
     }
+}
+
+/* ========== ENHANCED UI STYLES ========== */
+
+/* Work Experience Cards */
+.experience ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience li {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0;
+    display: block;
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.experience li:hover {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.experience li::before {
+    display: none;
+}
+
+/* Work Row Improvements */
+.work-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.75rem 1rem;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.work-company {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.work-date {
+    color: #6b7280;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.work-title {
+    grid-column: 1 / -1;
+    font-weight: 500;
+    color: var(--accent-color);
+    font-size: 0.95em;
+    margin-top: -0.25rem;
+}
+
+.work-desc {
+    line-height: 1.75;
+    font-size: 0.95em;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.work-desc b {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Projects Section Enhancement */
+.projects li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+}
+
+.projects li:last-child {
+    border-bottom: none;
+}
+
+.projects li:hover {
+    padding-left: 0.5rem;
+    background: rgba(63, 125, 88, 0.03);
+    border-radius: 6px;
+}
+
+/* Quick Facts Enhancement */
+.facts li {
+    padding: 0.4rem 0;
+    position: relative;
+}
+
+.facts li::before {
+    content: "→";
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-right: 0.75rem;
+    opacity: 1;
+}
+
+/* Highlights Enhancement */
+.highlights li {
+    padding: 0.3rem 0;
+}
+
+.highlights li::before {
+    content: "◦";
+    font-size: 1.2em;
+    color: var(--accent-color);
+    opacity: 0.7;
+}
+
+/* Section Dividers */
+section h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent-color);
+    opacity: 0.5;
+    border-radius: 2px;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+footer .footer-links span {
+    opacity: 0.4;
+    font-size: 0.7em;
+}
+
+footer a {
+    border-bottom: none;
+    opacity: 0.8;
+}
+
+footer a:hover {
+    opacity: 1;
+    border-bottom: none;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+    background: rgba(63, 125, 88, 0.2);
+    color: var(--text-color);
+}
+
+/* Intro section polish */
+.intro {
+    padding: 0.5rem 0;
+}
+
+.intro p:first-child {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Modal close button enhancement */
+.close {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.close:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
+    transform: rotate(90deg);
+}
+
+/* Mobile adjustments for new styles */
+@media (max-width: 768px) {
+    .work-row {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+    
+    .work-date {
+        text-align: left;
+        order: 2;
+    }
+    
+    .work-title {
+        order: 3;
+    }
+    
+    .experience li {
+        padding: 1rem;
+    }
+    
+    footer .footer-links {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .experience li {
+        padding: 0.875rem;
+        border-radius: 8px;
+    }
+    
+    .work-company {
+        font-size: 1em;
+    }
+    
+    footer {
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
 } 
